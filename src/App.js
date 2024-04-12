@@ -1,27 +1,16 @@
 import { React } from 'react';
 import './App.scss';
+import Button from './components/button';
 
 const App = () =>
 	<div className="App">
 		<a href="https://www.google.com">
-			<button style={ {
-				backgroundColor: 'red', color: 'black',
-				padding: '10px',
-			} }
-			>
-				button1
-			</button>
-
+			<Button{ ...{ data: { color: 'blue', label: 'button1' }} }/>
 		</a>
 		<a href="https://www.instagram.com">
-			<button style={ {
-				backgroundColor: 'blue', color: 'black',
-				padding: '10px',
-			} }
-			>
-				button2</button>
-
+			<Button{ ...{ data: { color: 'red', label: 'button2' }} }/>
 		</a>
+		<input type="text"/>
 	</div>;
 
 export default App;
